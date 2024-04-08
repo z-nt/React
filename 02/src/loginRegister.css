@@ -1,0 +1,17 @@
+.singUp{
+    border: 1px solid red ;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 3rem;
+}
