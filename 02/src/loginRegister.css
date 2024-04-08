@@ -1,5 +1,5 @@
 .singUp{
-    border: 1px solid red ;
+    border: 1px solid #ccc ;
     width: 400px;
     height: 400px;
     position: relative;
@@ -14,4 +14,28 @@ fieldset{
     flex-direction: column;
     width: 30%;
     height: 3rem;
+    border: none;
+}
+input{
+    border: 1px solid #ccc;
+    height: 3rem;
+    padding-left: 1rem;
+}
+.person{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.person h3{
+    font-size: 1rem;
+    color: darkblue;
+    font-family: cursive;
+    font-weight: bold;
+
 }
