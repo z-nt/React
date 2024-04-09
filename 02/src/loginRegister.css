@@ -23,7 +23,7 @@ input{
 }
 .person{
     position: relative;
-    width: 400px;
+    width: 120px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 12px;

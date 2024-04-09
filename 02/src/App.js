@@ -1,40 +1,51 @@
 import { Component } from "react";
-import "./loginRegister.css"
 import SingUp from "./singup";
+import Users from "./list";
 
-class  Main extends Component{
+class Main extends Component{
 
-state={
-    user:{
-        name:"null",
-        serial:"null",
-        pass:"null"
+    state={
+        persons:[
+            {name:"kian" , serial:214546 , pass:123456},
+            
+        ]
     }
- }
+
+    addUsers=(users)=>{
+        console.log(users);
+        this.setState( this.state.persons = users)
+
+
+
+
+
+
+
+        // let shakhs =[...this.state.persons,users]
+        // this.setState(
+        //     {users:shakhs}
+        // )
+        // console.log(users);
+        // const states = this.state.persons;
+        // for(var i = 0 ; i < states; i++ ){
+        //     if(states[i] == users){
+        //         console.log("hastesh");
+        //     }else{
+        //         console.log("nistesg");
+        //         states.push(users);
+        //     }
+        // }
+    }
 
     render(){
-        
-   const handelChange=()=>{
-        this.setState(
-            this.props.person=(person)=>{
-                person.name = this.state.user.name;
-                person.serialNumber = this.state.user.serial;
-                person.pass = this.state.user.pass;
-            }
-        )
-
-}
         return(
             <>
-                    <div className="person">
-                        <h3>person name:  {this.state.name}   </h3>
-                        <h3>person serialNumber:</h3>
-                        <h3>person password:    </h3>
-                    </div>
-                <SingUp  changeState={handelChange}/>
+                <Users addPersons={this.state.persons} />    
+                <SingUp addUsers={this.addUsers}/>
             </>
         )
     }
+
 }
 
 
