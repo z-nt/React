@@ -1,27 +1,18 @@
 import React from "react";
 import "./loginRegister.css";
 
-function Users({addPersons}){
-  
-  const personList = addPersons.map((user)=>{
-        return(
-            <>
-                <div className="person" >
-                    <h3>name:  {user.name}</h3>
-                    <h3>serial:{user.serial}</h3>
-                    <h3>pass:  {user.pass}</h3>
-                </div>
-            </>
-        )
-
-    })
+const  Users = ({persons}) => {
 
     return(
-        <>
-         {personList}
-        </>
-    )
-}
+            
+                <div className="person" key={persons.id}>
+                    <h3>name:  {persons.name}</h3>
+                    <h3>serial:{persons.serial}</h3>
+                    <h3>pass:  {persons.pass}</h3>
+                </div>
+    );
 
+
+}
 
 export default Users;

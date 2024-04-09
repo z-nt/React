@@ -16,8 +16,8 @@ class SingUp extends Component{
     }
 
 
-    handelSubmit = (e) =>{
-        e.preventDefault();
+    handelSubmit = () =>{
+  
         this.props.addUsers(this.state)
      }    
 

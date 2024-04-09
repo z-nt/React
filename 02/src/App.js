@@ -6,7 +6,8 @@ class Main extends Component{
 
     state={
         persons:[
-            {name:"kian" , serial:214546 , pass:123456},
+            {name:"kian" , serial:214546 , pass:123456 , id:1},
+       
             
         ]
     }
@@ -14,12 +15,6 @@ class Main extends Component{
     addUsers=(users)=>{
         console.log(users);
         this.setState( this.state.persons = users)
-
-
-
-
-
-
 
         // let shakhs =[...this.state.persons,users]
         // this.setState(
@@ -40,7 +35,7 @@ class Main extends Component{
     render(){
         return(
             <>
-                <Users addPersons={this.state.persons} />    
+                <Users persons={this.state.persons} />    
                 <SingUp addUsers={this.addUsers}/>
             </>
         )
