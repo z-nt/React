@@ -1,0 +1,131 @@
+.textEditor{
+    border: none ;
+    width: 60%;
+    height: 70%;
+    position: relative;
+    border-radius: 12px;
+    background-color: #222831;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* navbar Header */
+.navbar-menu{
+    width: 100%;
+    height: 3rem;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #76ABAE ;
+    justify-content: space-between;
+}
+.nav{
+    border:none ;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #31363F;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+ .nav li{
+   list-style-type: none; 
+   font-size: 1rem;
+    padding: 0.5rem;
+   color:#EEEEEE ;
+   cursor: default;
+   border: none ;
+}
+
+ .nav li:hover{
+    background-color: #6d6b6b;
+}
+
+
+
+.nav-setting  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    height: 100%;
+
+
+}
+/* navbar Header */
+/* document */
+    .document{
+        border: none ;
+        height: 80%;
+        position: relative;
+        color: #EEEEEE;
+        overflow: hidden;
+
+    }
+    .doc{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        padding-bottom: 90%;
+        text-align: top;
+        background-color: #222831;
+        color: #EEEEEE;
+        border: none;
+        outline: none;
+        resize: none;
+        overflow: hidden;
+        scroll-behavior: none;
+    }
+/* document */
+
+/* footer */
+.footer{
+    border: none ;
+    height: 3rem;
+    background-color: #31363F;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.ftr-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.ftr-item{
+    list-style-type: none;
+    font-size: 0.7rem;
+    color:#EEEEEE ;
+    border-right: #6d6b6b 1px solid ;
+    padding-right: 5px;
+}
+/* footer */
+
+
+
+/* file nav-item style */
+.file-menu{
+    border: 1px solid none ;
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px 0px darkblue;
+    position: absolute;
+    z-index: 999;
+    top: 3rem;
+    left: 0%;
+    height: 70%;
+    width: 45%;
+    background-color: #31363F;
+    display: none;
+    flex-direction: column;
+}
+
+/* file nav-item style */
+
+
+
+
