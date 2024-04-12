@@ -5,13 +5,9 @@ import "./texteditor.css";
 
 
 function File(){
-
-
-    
     
     const handelClick = ()=>{
         var fileMenu = document.getElementById("file-menu");
-       
         if(fileMenu.style.display=="none"){
             fileMenu.style.display = "flex"
         }else{
