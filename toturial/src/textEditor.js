@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./headerTextEditor";
 import Navbar from "./navbar";
-import Footer from "./footer";
 import Document from "./document";
+import Footer from "./footer";
 import "./texteditor.css";
 
 

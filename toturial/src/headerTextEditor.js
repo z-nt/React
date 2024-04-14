@@ -1,45 +1,49 @@
 import React from "react-dom";
+import NewFIle from "./newFIle";
+import { useState } from "react";
 import "./texteditor.css";
 
-
-console.log("asdsad");
-
+let nextId =1;
 function Header(){
+    const [newItems,setNewItems] = useState([]);
 
-const newFIle = [
-        {name:"newfile",id:1},
-];
-
-
-const newObject ={
-    name:null,
-    id:null
-};
-
-const createObject = ()=>{
-    let x = 1;
-    for (var i = 0 ;  i < newFIle.length ; i++){
-        newObject.name = newFIle[i].name;
-        if(newObject.id <= newFIle[i].id ){
-            x++;
-            newObject.id = x ;
+    const createObject = ()=>{
+        let newObject ={
+            name:"newfile",
+            id:nextId ++,
         }
+        return newObject;
+    }
+
+
+    const createItems = ()=>{
+       const object= createObject();
+        setNewItems([
+            ...newItems,{name:object.name,id:object.id}
+        ])    
+    }
+    
+    const arrowLeft=()=>{
+        console.log("sadsa");
+       var left = 0;
+        const fileName= document.getElementById("fileName");
+        fileName.scrollTo({
+            left: 100 + "px",
+            behavior:"smooth"
+        })
 
     }
 
-    newFIle.push(newObject);
-    let newElement = document.createElement("li");
-    newElement.innerHTML = `${newObject.name}`;
-    newElement.setAttribute("id",newObject.id);
-    let newfile = document.getElementById("fileBox");
-    newfile.append(newElement);
-}
+    const arrowRight=()=>{
+        var right = 0;
 
-const arrowLeft = ()=>{
-    console.log(newFIle);
-}
-
-
+        const fileName= document.getElementById("fileName");
+        fileName.scrollTo({
+            right: 100 + "px",
+            behavior:"smooth"
+        })
+        
+    }
 
 
 
@@ -54,12 +58,16 @@ return(
                         <div className="Logo">
                             logo
                         </div>
-                            <button onClick={arrowLeft}  id="arrowLeft" className="arrowLeft">al</button> 
+                            <button onClick={arrowLeft} id="arrowLeft" className="arrowLeft">al</button> 
                              <li id="fileName" className="fileName">
-                                    <div id="fileBox" className="newfile"></div>
+                                    <ul id="fileBox" className="newfile">
+                                       {newItems.map(item=>(
+                                        <li key={item.id}>{item.name}</li>
+                                       ))}
+                                    </ul>
                              </li>
-                        <button id="arrowRight" className="arrowRight">ar</button> 
-                        <button onClick={createObject} className="plus">+</button>
+                        <button onClick={arrowRight} id="arrowRight" className="arrowRight">ar</button> 
+                        <button onClick={createItems}  className="plus">+</button>
                 </ul>
                 <div className="btns">
                             <li>m</li>
