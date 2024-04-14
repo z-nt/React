@@ -165,8 +165,8 @@
     height: 100%;
     bottom: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
     border: 1px solid green;
 }
 .newfile{
@@ -179,7 +179,8 @@
     border: 1px solid red ;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    text-align: center;
+    justify-content: center;
     overflow: hidden;
 }
 .plus{

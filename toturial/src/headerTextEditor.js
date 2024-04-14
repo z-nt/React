@@ -1,68 +1,42 @@
-import React from "react";
-import Document from "./document";
-import { useState } from "react";
+import React from "react-dom";
 import "./texteditor.css";
+
+
+console.log("asdsad");
 
 function Header(){
 
-const [state , setState] = useState("newfile");
-    
 const newFIle = [
         {name:"newfile",id:1},
-        {name:"newfile",id:2},
-        {name:"newfile",id:3},
 ];
+
 
 const newObject ={
     name:null,
     id:null
 };
 
-
-
-const handelClick = ()=>{
-    createDoc(newFIle)
-    setState(newObject.name)
-    createList();
-};
-
-function createList(){
-    let fileBox = document.getElementById("fileBox");
-    let newElemetn = document.createElement("li");
-    newElemetn.setAttribute("id",newObject.id);
-    newElemetn.className="newItems";
-    newElemetn.innerHTML=state;
-    fileBox.appendChild(newElemetn);     
-};
-
-   function  createDoc (arr){
-    let plusId = 0;
-    let temp =arr[0];
-    for(var i = 0 ; i <arr.length ; i++){
-            if(arr[i].id > temp.id) {
-                temp = arr[i];
-                plusId = temp.id + 1;
-            }                
-    }
-    newObject.name = arr[0].name;
-    newObject.id = plusId;
-    arr.push(newObject);
-   
-} ; 
-
-const arrowLeft= ()=>{
-    let fileBox = document.getElementById("fileBox");
-    let newItems = document.querySelectorAll(".newItems");
-
-    for (var i = 0 ; i < newItems.length ; i++){
-        if(newItems[0].id < newItems[i].id) {
-            newItems[i] = newItems[0];
+const createObject = ()=>{
+    let x = 1;
+    for (var i = 0 ;  i < newFIle.length ; i++){
+        newObject.name = newFIle[i].name;
+        if(newObject.id <= newFIle[i].id ){
+            x++;
+            newObject.id = x ;
         }
 
-        console.log(newItems[0]);
     }
 
+    newFIle.push(newObject);
+    let newElement = document.createElement("li");
+    newElement.innerHTML = `${newObject.name}`;
+    newElement.setAttribute("id",newObject.id);
+    let newfile = document.getElementById("fileBox");
+    newfile.append(newElement);
+}
 
+const arrowLeft = ()=>{
+    console.log(newFIle);
 }
 
 
@@ -73,35 +47,25 @@ const arrowLeft= ()=>{
 
 
 
-    return(
-
+return(
         <>
             <div className="headers">
-
-
                 <ul className="headerMenu">
-
                         <div className="Logo">
                             logo
                         </div>
-
-                            <button  onClick={arrowLeft} id="arrowLeft" className="arrowLeft">al</button> 
+                            <button onClick={arrowLeft}  id="arrowLeft" className="arrowLeft">al</button> 
                              <li id="fileName" className="fileName">
                                     <div id="fileBox" className="newfile"></div>
                              </li>
-                            <button id="arrowRight" className="arrowRight">ar</button> 
-
-                             <button onClick={handelClick} className="plus">+</button>
-
-                       
+                        <button id="arrowRight" className="arrowRight">ar</button> 
+                        <button onClick={createObject} className="plus">+</button>
                 </ul>
-
                 <div className="btns">
                             <li>m</li>
                             <li>u</li>
                             <li>c</li>
                         </div>
-
             </div>
         </>
     )
