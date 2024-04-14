@@ -23,26 +23,19 @@ function Header(){
         ])    
     }
     
+    const fileBox= document.getElementById("fileBox");
     const arrowLeft=()=>{
-        console.log("sadsa");
-       var left = 0;
-        const fileName= document.getElementById("fileName");
-        fileName.scrollTo({
-            left: 100 + "px",
-            behavior:"smooth"
-        })
+        const items = document.querySelectorAll(".Items")
+        for(var i = 0 ; i < items.length; i++){
+            console.log(items[i]);
+            if(fileBox.innerHTML == items[i]){
+                console.log(items.id);
+            }
+        }
 
     }
-
     const arrowRight=()=>{
-        var right = 0;
-
-        const fileName= document.getElementById("fileName");
-        fileName.scrollTo({
-            right: 100 + "px",
-            behavior:"smooth"
-        })
-        
+      
     }
 
 
@@ -62,7 +55,7 @@ return(
                              <li id="fileName" className="fileName">
                                     <ul id="fileBox" className="newfile">
                                        {newItems.map(item=>(
-                                        <li key={item.id}>{item.name}</li>
+                                        <li id={item.id} className="Items" key={item.id}>{item.name}</li>
                                        ))}
                                     </ul>
                              </li>

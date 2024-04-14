@@ -161,18 +161,22 @@
 
 .fileName{
     border: none;
-    width: 40%;
+    width: 100px;
     height: 100%;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid green;
+    transition: all 1s ease;
+    overflow: hidden;
+   
+
 }
 .newfile{
     background-color: #31363F;
     padding: 0.3rem;
-    width: 100%;
+    width: 400px;
     height: 100%;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -181,8 +185,9 @@
     flex-direction: row;
     text-align: center;
     justify-content: center;
-    transition: all 1s ease;
-    overflow:hidden;
+    transition: all 0.5s ease;
+    position: relative;
+   
 }
 .plus{
     background-color: #222831;
