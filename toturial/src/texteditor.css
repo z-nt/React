@@ -167,7 +167,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid green;
     transition: all 1s ease;
     overflow: hidden;
    
@@ -180,7 +179,6 @@
     height: 100%;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    border: 1px solid red ;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -196,7 +194,6 @@
     font-size: 1rem;
 }
 #fileBox li{
-    border: 1px solid green;
     margin-right: 1rem;
 }
 /* file header */

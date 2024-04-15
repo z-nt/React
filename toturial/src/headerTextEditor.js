@@ -23,20 +23,20 @@ function Header(){
         ])    
     }
     
-    const fileBox= document.getElementById("fileBox");
-    const arrowLeft=()=>{
-        const items = document.querySelectorAll(".Items")
-        for(var i = 0 ; i < items.length; i++){
-            console.log(items[i]);
-            if(fileBox.innerHTML == items[i]){
-                console.log(items.id);
-            }
-        }
+    // const fileBox= document.getElementById("fileBox");
+    // const arrowLeft=()=>{
+    //     const items = document.querySelectorAll(".Items")
+    //     for(var i = 0 ; i < items.length; i++){
+    //         console.log(items[i]);
+    //         if(fileBox.innerHTML == items[i]){
+    //             console.log(items.id);
+    //         }
+    //     }
 
-    }
-    const arrowRight=()=>{
+    // }
+    // const arrowRight=()=>{
       
-    }
+    // }
 
 
 
@@ -51,7 +51,7 @@ return(
                         <div className="Logo">
                             logo
                         </div>
-                            <button onClick={arrowLeft} id="arrowLeft" className="arrowLeft">al</button> 
+                            <button id="arrowLeft" className="arrowLeft">al</button> 
                              <li id="fileName" className="fileName">
                                     <ul id="fileBox" className="newfile">
                                        {newItems.map(item=>(
@@ -59,7 +59,7 @@ return(
                                        ))}
                                     </ul>
                              </li>
-                        <button onClick={arrowRight} id="arrowRight" className="arrowRight">ar</button> 
+                        <button  id="arrowRight" className="arrowRight">ar</button> 
                         <button onClick={createItems}  className="plus">+</button>
                 </ul>
                 <div className="btns">

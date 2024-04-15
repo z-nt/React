@@ -3,13 +3,21 @@ import "./texteditor.css";
 
 
 
-function Document(){
+function Document({elements}){
+    const elem = elements();
     const keyHandler = (e)=>{
-        console.log(e.key);
         if(e.key == "Enter"){
-            console.log("hello");
+            elem.line++;
         }
-    }
+        if(e.key){
+           elem.wordCounter++;
+        }if(elem.wordCounter){
+            elem.col++;
+        }
+}
+
+
+
     return(
         <>
             <div  className="document" id="text">
@@ -18,7 +26,6 @@ function Document(){
             className="doc"
             aria-multiline
             />
-
             <textarea/>
             </div>
         </>
