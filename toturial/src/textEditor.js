@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import Header from "./headerTextEditor";
 import Navbar from "./navbar";
 import Document from "./document";
@@ -7,8 +7,7 @@ import "./texteditor.css";
 
 
 
-function TextEditor(){
-  
+function TextEditor (){
   const  state = {
         elements:{
             col:1,
@@ -17,25 +16,31 @@ function TextEditor(){
         }
     }
 
+
+const  changeHandel = (e)=>{
+     //   console.log(state.elements);
+}
 const addElement = ()=>{
     return state.elements
 }
 
 const addState= ()=>{
-   return state.elements
+    return state.elements
 }
 
 
     return(
+       
         <>
-            <div className="textEditor">
+            <div className="textEditor" onChange={changeHandel}>
                 <Header/>
                 <Navbar/>
-                <Document elements={addElement}/>
-                <Footer   state={addState}/>
+                <Document elements={addElement} />
+                <Footer   state={addState}     />
             </div>
         </>
     )
+   
 }
 
 

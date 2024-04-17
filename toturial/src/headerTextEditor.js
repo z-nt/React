@@ -7,6 +7,7 @@ let nextId =1;
 function Header(){
     const [newItems,setNewItems] = useState([]);
 
+    
     const createObject = ()=>{
         let newObject ={
             name:"newfile",
@@ -22,28 +23,6 @@ function Header(){
             ...newItems,{name:object.name,id:object.id}
         ])    
     }
-    
-    // const fileBox= document.getElementById("fileBox");
-    // const arrowLeft=()=>{
-    //     const items = document.querySelectorAll(".Items")
-    //     for(var i = 0 ; i < items.length; i++){
-    //         console.log(items[i]);
-    //         if(fileBox.innerHTML == items[i]){
-    //             console.log(items.id);
-    //         }
-    //     }
-
-    // }
-    // const arrowRight=()=>{
-      
-    // }
-
-
-
-
-
-
-
 return(
         <>
             <div className="headers">

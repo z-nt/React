@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./texteditor.css";
 
-
 function Footer({state}){
-    const number=state()
+
+    const number=state()  
     return(
         <>
             <div className="footer">
                     <ul className="ftr-nav">
-                            <li className="ftr-item"  >
+                            <li className="ftr-item" >
                                 <span>{number.line},<span>{number.col}</span></span>
                             </li>
                             <li className="ftr-item" >
@@ -20,6 +20,7 @@ function Footer({state}){
                             </li>
                             <li className="ftr-item" >utf-8</li>
                     </ul>
+                    
             </div>
         </>
     )
