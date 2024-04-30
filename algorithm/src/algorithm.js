@@ -23,10 +23,9 @@ const countingSort =(e)=>{
     console.log(e.target.value);
 }
 
-
     return(
         <>
-            <div className="algorithmList col-6">
+            <div className="algorithmList col-lg-6 col-md-9 col-sm-12 col-12">
                 <Buttons handelClick={bubbleSort   }    name="bubbleSort"      id="bubbleSort"    className="buton"/>
                 <Buttons handelClick={selectionSort}    name="selectionSort"   id="selectionSort" className="buton"/>
                 <Buttons handelClick={insertionSort}    name="insertionSort"   id="insertionSort" className="buton"/>

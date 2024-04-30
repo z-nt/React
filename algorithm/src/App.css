@@ -4,9 +4,9 @@
 }
 
 .box{
- 
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   height: 100%;
   position: relative;
 }
@@ -55,4 +55,36 @@
   font-weight: bold;
   font-family: cursive;
   border: nond;
+}
+
+
+.arrays-box{
+  border-radius: 12px;
+  margin: 5rem auto;
+  position: relative;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  background-color: #183D3D;
+}
+
+.arr-box{
+  height: 3rem;
+  text-align: center;
+  width: 50%;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #040D12;
+  color: #e2dfdf;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: cursive;
+  border: nond;
+  padding: 0%;
+  display: flex;
+  justify-content:center ;
+
 }

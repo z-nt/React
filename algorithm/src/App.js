@@ -2,16 +2,21 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import ButtonsBox from './algorithm';
+import Arrays from './arrays';
+
+
+
 function App() {
   return (
     <div className="app col-xl-12 col-lg-12  col-md-12 col-sm-12 col-12">
-        <div className='box col-12'>
-                  <div className=' box-item box-algorithm-buttons col-6'>
+        <div className='box col-xl-12 col-lg-12  col-md-12 col-sm-12 col-12'>
+                  <div className=' box-item box-algorithm-buttons col-lg-6 col-md-12 col-sm-12 col-12'>
                       <h1>Choose Youre Algorithm</h1>
                       <ButtonsBox/>
                   </div>
-                  <div className=' box-item box-algorithm-inputs col-6'>
+                  <div className=' box-item box-algorithm-inputs col-lg-6 col-md-12 col-sm-12 col-12'>
                      <h1>See How Algorithm Works </h1>
+                      <Arrays/>
                   </div>
         </div>
     </div>
