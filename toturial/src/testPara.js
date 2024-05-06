@@ -1,20 +1,13 @@
-class Car {
-    constructor(name){
-        this.name = name;
+import React from "react";
+class Car extends React.Component{
+    constructor(props){
+        super(props)
     }
-    present(){
-        return "this is the" + this.name;
-    }
-
-}
-
-
-class Mine extends Car{
-    constructor(name , model){
-        super(name);
-        this.model = model;
-    }
-    show(){
-        return this.present() + this.model;
+    render(){
+        return(
+            <h1>i am {this.props.color}</h1>
+        )
     }
 }
+
+export default Car;
