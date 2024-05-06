@@ -1,13 +1,38 @@
 import React from "react";
-class Car extends React.Component{
-    constructor(props){
-        super(props)
+import './index.css';
+
+
+
+class UserList extends React.Component{
+    state={
+        name:"kian",
+        age:26
+    }    
+    
+
+    chanegeName=()=>{
+        this.setState({name:"mobin"})
     }
     render(){
         return(
-            <h1>i am {this.props.color}</h1>
+            <>
+            <div className="box">
+                <h1>userList</h1>
+                <div className="list">
+                    <ul className="users">
+                            <li>{this.state.name}</li>
+                    </ul>
+                    <button onClick={this.chanegeName}>
+                        change name
+                    </button>
+                </div>
+            </div>
+            </>
         )
     }
+
 }
 
-export default Car;
+
+
+export default UserList;
